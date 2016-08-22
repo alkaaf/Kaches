@@ -26,6 +26,7 @@ public class KachesMain extends javax.swing.JFrame {
     public KachesMain() {
         initComponents();
         debe = new db(dbpath.getText());
+        wc = new writeConfig();
         refresh();
     }
 
@@ -544,6 +545,7 @@ public class KachesMain extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         debe = new db(dbpath.getText());
+        wc.setConfig("db_path", dbpath.getText());
         refresh();
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -719,4 +721,5 @@ public class KachesMain extends javax.swing.JFrame {
     private javax.swing.JButton saveout;
     // End of variables declaration//GEN-END:variables
     private db debe;
+    private writeConfig wc;
 }
